@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: django-config
+  namespace: default
+data:
+  DJANGO_SETTINGS_MODULE: "mysite.settings"
+  DJANGO_DEBUG: "False"
+  # Replace '*' with the actual hostname or NodePort IP before deploying to production.
+  DJANGO_ALLOWED_HOSTS: "*"
+  DB_NAME: "djangodb"
+  DB_USER: "djangouser"
+  DB_HOST: "postgres"
+  DB_PORT: "5432"
